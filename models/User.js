@@ -11,7 +11,8 @@ const UserSchema = new Schema(
         email: {
             type: String,
             required: true,
-            unique: true
+            unique: true,
+            match: [/.+@.+\..+/, 'Please enter a valid e-mail address']
         },
         // add thoughts
         thoughts: [
@@ -24,7 +25,7 @@ const UserSchema = new Schema(
         friends: [
             {
             type: Schema.Types.ObjectId,
-            ref: 'Friend'
+            ref: 'User'
             }
         ]
     },
@@ -36,11 +37,11 @@ const UserSchema = new Schema(
     }
 );
 
-const User = model('User', UserSchema);
-
 // add virtual to get total count of user's friends
 UserSchema.virtual('friendCount').get(function() {
-    return this.friends.length;
+    return this.friends.reduce((total, friends) => total + friends.replies.length +1, 0);
 });
+
+const User = model('User', UserSchema);
 
 module.exports = User;
