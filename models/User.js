@@ -4,13 +4,13 @@ const UserSchema = new Schema(
     {
         username: {
             type: String,
-            required: true,
+            required: 'You must provide a username',
             unique: true,
             trim: true
         },
         email: {
             type: String,
-            required: true,
+            required: 'You must provide a valid email address',
             unique: true,
             match: [/.+@.+\..+/, 'Please enter a valid e-mail address']
         },
@@ -32,6 +32,7 @@ const UserSchema = new Schema(
     {
         toJSON: {
             virtuals: true,
+            getters: true
         },
         id: false
     }
@@ -39,7 +40,7 @@ const UserSchema = new Schema(
 
 // add virtual to get total count of user's friends
 UserSchema.virtual('friendCount').get(function() {
-    return this.friends.reduce((total, friends) => total + friends.replies.length +1, 0);
+    return this.friends.length
 });
 
 const User = model('User', UserSchema);
