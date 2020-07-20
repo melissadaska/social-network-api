@@ -1,9 +1,9 @@
 # Social Network API
 
-Follow the links below that demonstrate the functionality of the Social Network API! 
-[Demonstration of Models/Controllers/Routes](https://drive.google.com/file/d/183QKOfFfPxhaeVb_h_8MIImzumK02frF/view)
-[Invoke Application and Testing User Routes in Insomnia](https://drive.google.com/file/d/10Bux-5VapsxrpcV4SUpgt55NSBUR2G-z/view)
-[Testing Thoughts Routes in Insomnia](https://drive.google.com/file/d/1LPPG8fB-h56tIgeDxkFolPLT2emwFqKN/view)
+Follow the links below that demonstrate the functionality of the Social Network API!   
+[Demonstration of Models/Controllers/Routes](https://drive.google.com/file/d/183QKOfFfPxhaeVb_h_8MIImzumK02frF/view)  
+[Invoke Application and Testing User Routes in Insomnia](https://drive.google.com/file/d/10Bux-5VapsxrpcV4SUpgt55NSBUR2G-z/view)  
+[Testing Thoughts Routes in Insomnia](https://drive.google.com/file/d/1LPPG8fB-h56tIgeDxkFolPLT2emwFqKN/view)  
 
 
   ## Table of Contents
