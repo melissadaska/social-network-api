@@ -87,16 +87,15 @@ const thoughtController = {
 
   // add new reaction and update thought to include reaction
   addReaction({ params, body }, res) {
-      console.log(body);
-      Thought.findOneAndUpdate({ _id: params.thoughtid }, { $push: {reactions: body }}, { new: true, runValidators: true })
+      Thought.findOneAndUpdate({ _id: params.thoughtId }, { $push: {reactions: body }}, { new: true })
       .then(dbThoughtData => {
-        if (!dbThoughtData) {
+        if(!dbThoughtData) {
           res.status(404).json({ message: 'No thought found with this id!' });
           return;
         }
         res.json(dbThoughtData);
       })
-      .catch(err => res.json(err));
+      .catch(err => res.status(400).json(err));
   },
 
   // delete reaction
