@@ -19,16 +19,16 @@ This is great for a social network web application where users can share their t
 
 ## Screenshots
 GET Users
-![GET user route](./assets/getuser.png)
+![GET user route](./public/assets/getuser.png)
 
 Add Friend to User
-![Add Friend](./assets/addfriend.png)
+![Add Friend](./public/assets/addfriend.png)
 
 GET Thoughts
-![GET thought route](./assets/getthoughts.png)
+![GET thought route](./public/assets/getthoughts.png)
 
 Add Reaction to a Thought
-![Add Reaction](./assets/addreaction.png)
+![Add Reaction](./public/assets/addreaction.png)
 
 ## Usage
 Launch terminal, run command npm start, test the routes in Insomnia.
